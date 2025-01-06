@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/CardTek/static/css/main.ba88c894.css",
-    "main.js": "/CardTek/static/js/main.067528d0.js",
+    "main.css": "/CardTek/static/css/main.b78c11ba.css",
+    "main.js": "/CardTek/static/js/main.9b97e693.js",
     "static/js/453.b0bb1a93.chunk.js": "/CardTek/static/js/453.b0bb1a93.chunk.js",
     "static/media/homescreenbackground.jpg": "/CardTek/static/media/homescreenbackground.f59bfbf233667c928f1b.jpg",
     "index.html": "/CardTek/index.html",
-    "main.ba88c894.css.map": "/CardTek/static/css/main.ba88c894.css.map",
-    "main.067528d0.js.map": "/CardTek/static/js/main.067528d0.js.map",
+    "main.b78c11ba.css.map": "/CardTek/static/css/main.b78c11ba.css.map",
+    "main.9b97e693.js.map": "/CardTek/static/js/main.9b97e693.js.map",
     "453.b0bb1a93.chunk.js.map": "/CardTek/static/js/453.b0bb1a93.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba88c894.css",
-    "static/js/main.067528d0.js"
+    "static/css/main.b78c11ba.css",
+    "static/js/main.9b97e693.js"
   ]
 }
