@@ -1,0 +1,133 @@
+.card-filter-container {
+    background-image: url('../assets/homescreenbackground.jpg'); /* Replace with your sports background image URL */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: black; /* Black text for container */
+}
+
+.table-container {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    max-width: 90%;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: black; /* Black text for table container */
+}
+
+.table-title {
+    text-align: center;
+    font-size: 2em;
+    color: black; /* Black text for title */
+    margin-bottom: 20px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    table-layout: auto; /* Adjust table layout to fit content */
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff; /* White background for the table */
+    color: black; /* Black text in the table */
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: black; /* Black text in table cells */
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+.table-header {
+    background-color: #82867a;
+    color: white; /* White text for header */
+    font-weight: bold;
+    padding: 15px;
+}
+
+.filter-input {
+    margin-top: 5px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    font-size: 0.9em;
+    color: black; /* Black text in filter input */
+    background-color: #fff; /* White background for the input */
+}
+
+.table-row:hover {
+    background-color: #f1f1f1; /* Light hover effect */
+}
+
+.clear-button {
+    background-color: #ff7300;
+    color: black; /* Black text for button */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    display: block;
+    margin-left: 0; /* Remove the default margin */
+    margin-top: 20px; /* Add space from top */
+    width: auto; /* Allow button to adjust width to content */
+    text-align: left; /* Align the text to the left */
+}
+
+.clear-button:hover {
+    background-color: #218838;
+}
+
+.clear-button:focus {
+    outline: none;
+}
+
+.filter-dropdown {
+    margin-top: 5px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 0.9em;
+    color: black; /* Black text in dropdown */
+    background-color: #fff; /* White background */
+}
+
+.filter-input,
+.filter-dropdown {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 0.9em;
+    color: black; /* Black text for both filter inputs and dropdown */
+    background-color: #fff; /* White background */
+}
+
+/* Invisible Textbox */
+.invisible-textbox {
+    opacity: 0;
+    pointer-events: none;
+}

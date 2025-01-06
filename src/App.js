@@ -1,16 +1,21 @@
 import React from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';  // Use BrowserRouter
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import Home from './components/Home';
-import GoogleSheets from './components/GoogleSheets';
+import CardFilter from './components/CardFilter';
+import Auth from './components/Auth';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/google-sheets" element={<GoogleSheets />} />
-      </Routes>
-    </Router>
+    <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_ID}> {/* Replace with your Client ID */}
+      <Router>
+        <Routes>
+          <Route path="/CardTek" element={<Home />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/card-filter" element={<CardFilter />} />
+        </Routes>
+      </Router>
+    </GoogleOAuthProvider>
   );
 }
 

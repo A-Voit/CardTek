@@ -12,38 +12,40 @@
   }
   
   .hero {
-    background: rgba(0, 0, 0, 0.9); /* Slight dark overlay for better text visibility */
-    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
   }
   
   .hero-title {
-    font-size: 3rem;
-    font-family: 'Arial', sans-serif;
-    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
   }
   
   .hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 20px;
   }
   
   .hero-button {
-    background-color: #ff7f50; /* Sports-themed button color (Orange) */
+    background-color: #007bff;
     color: white;
-    padding: 15px 30px;
-    font-size: 1.2rem;
     border: none;
-    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin: 10px;
+    transition: background-color 0.3s;
   }
   
   .hero-button:hover {
-    background-color: #ff5722; /* Darker orange on hover */
-  }
-  
-  .hero-button:focus {
-    outline: none;
+    background-color: #0056b3;
   }
