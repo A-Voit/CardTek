@@ -23,6 +23,8 @@ jobs:
 
     - name: Build the app
       run: yarn run build
+      env:
+        REACT_APP_MY_RUNTIME_SECRET: ${{ secrets.MY_RUNTIME_SECRET }}  # Pass the secret to React
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
@@ -30,5 +32,3 @@ jobs:
         branch: gh-pages  # The branch to deploy the app to
         folder: build  # The folder containing the build
         token: ${{ secrets.GH_TOKEN }}  # Automatically provided token
-      env:
-        REACT_APP_GOOGLE_SHEET_ID: ${{ secrets.REACT_APP_GOOGLE_SHEET_ID }}  # Set the secret as an environment variable
