@@ -29,4 +29,4 @@ jobs:
       with:
         branch: gh-pages  # The branch to deploy the app to
         folder: build  # The folder containing the build
-        token: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided token
+        token: ${{ secrets.GH_TOKEN }}  # Automatically provided token
