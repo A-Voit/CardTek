@@ -1,0 +1,49 @@
+.home-container {
+    background-image: url('../assets/homescreenbackground.jpg'); /* Replace with your sports background image URL */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero {
+    background: rgba(0, 0, 0, 0.9); /* Slight dark overlay for better text visibility */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .hero-button {
+    background-color: #ff7f50; /* Sports-themed button color (Orange) */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-button:hover {
+    background-color: #ff5722; /* Darker orange on hover */
+  }
+  
+  .hero-button:focus {
+    outline: none;
+  }
