@@ -1,0 +1,32 @@
+name: Deploy React app to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger deployment when pushing to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'  # Set the Node.js version
+
+    - name: Install dependencies
+      run: yarn install
+
+    - name: Build the app
+      run: yarn run build
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages  # The branch to deploy the app to
+        folder: build  # The folder containing the build
+        token: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided token
