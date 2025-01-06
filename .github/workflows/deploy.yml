@@ -30,3 +30,5 @@ jobs:
         branch: gh-pages  # The branch to deploy the app to
         folder: build  # The folder containing the build
         token: ${{ secrets.GH_TOKEN }}  # Automatically provided token
+      env:
+        REACT_APP_GOOGLE_SHEET_ID: ${{ secrets.REACT_APP_GOOGLE_SHEET_ID }}  # Set the secret as an environment variable
