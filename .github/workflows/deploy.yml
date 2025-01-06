@@ -16,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '16'  # Set the Node.js version
+        node-version: '18'  # Set the Node.js version
 
     - name: Install dependencies
       run: yarn install
