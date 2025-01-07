@@ -24,7 +24,14 @@ jobs:
     - name: Build the app
       run: yarn run build
       env:
-        REACT_APP_MY_RUNTIME_SECRET: ${{ secrets.REACT_APP_GOOGLE_SHEET_ID }}  # Pass the secret to React
+        REACT_APP_MY_RUNTIME_SECRET: ${{ secrets.REACT_APP_GOOGLE_SHEET_ID }},  # Pass the secret to React
+        REACT_APP_FILTER_GOOGLE_SHEET_ID: ${{ secrets.REACT_APP_FILTER_GOOGLE_SHEET_ID }},
+        REACT_APP_GOOGLE_SHEET_ID: ${{ secrets.REACT_APP_GOOGLE_SHEET_ID }},
+        REACT_APP_GOOGLE_API: ${{ secrets.REACT_APP_GOOGLE_API }},
+        REACT_APP_GOOGLE_FOOTBALL_SHEET_NAME: ${{ secrets.REACT_APP_GOOGLE_FOOTBALL_SHEET_NAME }},
+        REACT_APP_GOOGLE_CLIENT_ID: ${{ secrets.REACT_APP_GOOGLE_CLIENT_ID }},
+        REACT_APP_GOOGLE_REDIRECT_URL: ${{ secrets.REACT_APP_GOOGLE_REDIRECT_URL }},
+        REACT_APP_GOOGLE_OAUTH_CLIENT_ID: ${{ secrets.REACT_APP_GOOGLE_OAUTH_CLIENT_ID }}
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
