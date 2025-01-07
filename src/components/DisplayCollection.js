@@ -52,7 +52,7 @@ const DisplayCollection = () => {
     };
 
     fetchSheetData();
-  }, []);
+  }, [SPREADSHEET_ID, RANGE]);
 
   const handleOpenModal = () => {
     setNewRow(new Array(sheetData[0]?.length).fill('')); // Initialize with empty row based on column count
