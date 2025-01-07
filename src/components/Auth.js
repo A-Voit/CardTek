@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/Auth.css'; // Import CSS for styling
 
 const Auth = () => {
   const navigate = useNavigate();
@@ -8,7 +9,7 @@ const Auth = () => {
   const SCOPES = 'https://www.googleapis.com/auth/spreadsheets'; // Permission for Sheets
   const REDIRECT_URI = process.env.REACT_APP_GOOGLE_REDIRECT_URL; // Redirect URL after login
 
-  console.log("Redirect: ", REDIRECT_URI);
+  console.log('Redirect URI:', REDIRECT_URI);
 
   const buildOAuthURL = () => {
     const oauth2Url = new URL('https://accounts.google.com/o/oauth2/v2/auth');
@@ -36,10 +37,14 @@ const Auth = () => {
   }, [navigate]);
 
   return (
-    <div>
-      <h1>Authenticate with Google</h1>
-      <a href={buildOAuthURL()} className="login-button">
-        Sign in with Google
+    <div className="auth-container">
+      <h1>Welcome to CardTek</h1>
+      <p>Please sign in with Google to access your collection.</p>
+      <a href={buildOAuthURL()} className="auth-button">
+        <img
+          src="https://developers.google.com/identity/images/btn_google_signin_light_normal_web.png"
+          alt="Sign in with Google"
+        />
       </a>
     </div>
   );

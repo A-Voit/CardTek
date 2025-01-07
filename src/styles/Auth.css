@@ -1,0 +1,37 @@
+/* Center the content */
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Add some spacing and style to the title */
+  .auth-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  /* Style the description text */
+  .auth-container p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  /* Style the Google button */
+  .auth-button img {
+    width: 250px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .auth-button img:hover {
+    transform: scale(1.05);
+  }
+  
