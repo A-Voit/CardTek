@@ -4,14 +4,12 @@ import { useNavigate } from 'react-router-dom';
 const Auth = () => {
   const navigate = useNavigate();
 
-  console.log('Auth component rendered'); 
-  
-  const CLIENT_ID = process.env.REACT_GOOGLE_CLIENT_ID;  // Replace with your OAuth client ID
-  const SCOPES = 'https://www.googleapis.com/auth/spreadsheets';  // Permission to read/write to sheets
-  const REDIRECT_URI = process.env.REACT_GOOGLE_REDIRECT_URL;  // Redirect URL after Google login
+  const CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID; // Replace with your OAuth client ID
+  const SCOPES = 'https://www.googleapis.com/auth/spreadsheets'; // Permission for Sheets
+  const REDIRECT_URI = process.env.REACT_APP_GOOGLE_REDIRECT_URL; // Redirect URL after login
 
-  console.log('buildOAuthURL start'); 
-  // Build the OAuth URL
+  console.log("Redirect: ", REDIRECT_URI);
+
   const buildOAuthURL = () => {
     const oauth2Url = new URL('https://accounts.google.com/o/oauth2/v2/auth');
     oauth2Url.searchParams.append('client_id', CLIENT_ID);
@@ -23,20 +21,16 @@ const Auth = () => {
     return oauth2Url.toString();
   };
 
-  console.log('buildOAuthURL end'); 
-
   useEffect(() => {
-    // Check if access_token is in the URL
-    console.log("Effect running");
+    // Extract the access token from the URL hash
     const hashParams = new URLSearchParams(window.location.hash.replace('#', '?'));
     const token = hashParams.get('access_token');
-    console.log("ACCESS: ", token);
-    
+
     if (token) {
-      // Save the token to localStorage (or state)
+      // Save the token to localStorage
       localStorage.setItem('auth_token', token);
-      
-      // Redirect to the Google Sheets editor page
+
+      // Redirect to another page
       navigate('/card-filter');
     }
   }, [navigate]);
